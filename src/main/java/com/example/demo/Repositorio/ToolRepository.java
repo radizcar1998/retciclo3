@@ -29,7 +29,7 @@ public class CinemaRepository {
         return extencionesCrud.findById(id);
     }
     
-    public Tool save(Cinema cinema){
+    public Cinema save(Cinema cinema){
         return extencionesCrud.save(cinema);
     }
 }
