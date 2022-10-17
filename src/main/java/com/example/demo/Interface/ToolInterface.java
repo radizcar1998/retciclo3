@@ -5,11 +5,11 @@
 package com.example.demo.Interface;
 
 import org.springframework.data.repository.CrudRepository;
-import com.example.demo.Modelo.Tool;
+import com.example.demo.Modelo.Cinema;
 /**
  *
  * @author USUARIO
  */
-public interface ToolInterface extends CrudRepository<Tool, Integer> {
+public interface CinemaInterface extends CrudRepository<Cinema, Integer> {
     
 }
