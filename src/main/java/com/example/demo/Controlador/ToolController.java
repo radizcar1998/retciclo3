@@ -41,7 +41,7 @@ public class CinemaController {
     
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
-    public Cinema save (@RequestBody Tool tool){
+    public Cinema save (@RequestBody Cinema cinema){
         return cinemaService.save(cinema);
     }
 }
