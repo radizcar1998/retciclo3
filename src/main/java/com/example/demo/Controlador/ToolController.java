@@ -6,8 +6,8 @@ package com.example.demo.Controlador;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.example.demo.Modelo.Tool;
-import com.example.demo.Servicio.ToolService;
+import com.example.demo.Modelo.Cinema;
+import com.example.demo.Servicio.CinemaService;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,25 +23,25 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  * @author USUARIO
  */
 @RestController
-@RequestMapping("/api/Tool")
+@RequestMapping("/api/Cinema")
 
-public class ToolController {
+public class CinemaController {
       @Autowired
-    private ToolService toolService;
+    private CinemaService cinemaService;
     
     @GetMapping("/all")
-    public List<Tool> getAll(){
-        return toolService.getAll();
+    public List<Cinema> getAll(){
+        return cinemaService.getAll();
     }
     
     @GetMapping("/{id}")
-    public Optional<Tool> getTool(@PathVariable("id") int id){
-        return toolService.getTool(id);
+    public Optional<Cinema> getCinema(@PathVariable("id") int id){
+        return cinemaService.getCinema(id);
     } 
     
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
-    public Tool save (@RequestBody Tool tool){
-        return toolService.save(tool);
+    public Cinema save (@RequestBody Tool tool){
+        return cinemaService.save(cinema);
     }
 }
