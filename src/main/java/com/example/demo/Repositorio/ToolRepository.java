@@ -19,7 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class CinemaRepository {
      @Autowired
-    private ToolInterface extencionesCrud;
+    private CinemaInterface extencionesCrud;
     
     public List<Cinema> getAll(){
         return (List<Cinema>) extencionesCrud.findAll();
